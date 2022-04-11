@@ -1,0 +1,135 @@
+  STRUCTUREPOINT - spColumn v6.00 (TM)                                                                    Page   1
+  Licensed to: SW, IFT. License ID: -26F18                                                                02/04/22
+  D:\My Software\Julia using atom\Interaction Diagram\spCol\examples.col                                  10:32 PM
+
+
+
+
+
+
+
+
+
+
+
+
+                                     oooooo               o
+                                    oo    oo             oo
+                 ooooo    oooooo    oo          ooooo    oo      oo   oo   o oooooooooo    o ooooo 
+                oo    o   oo   oo   oo         oo   oo   oo      oo   oo    oo   oo   oo    oo   oo
+                oo        oo   oo   oo         oo   oo   oo      oo   oo    oo   oo   oo    oo   oo
+                 ooooo    oo   oo   oo         oo   oo   oo      oo   oo    oo   oo   oo    oo   oo
+                     oo   oooooo    oo         oo   oo   oo      oo   oo    oo   oo   oo    oo   oo
+                o    oo   oo        oo    oo   oo   oo   oo  o   oo   oo    oo   oo   oo    oo   oo
+                 ooooo    oo         oooooo     ooooo     ooo     ooooo o   oo   oo   oo    oo   oo (TM)
+
+
+
+
+
+     ==========================================================================================================
+                                               spColumn v6.00 (TM)
+                     Computer program for the Strength Design of Reinforced Concrete Sections
+                                    Copyright © 1988-2017, STRUCTUREPOINT, LLC.
+                                               All rights reserved
+     ==========================================================================================================
+
+
+
+
+     Licensee stated above acknowledges  that STRUCTUREPOINT (SP) is  not and cannot be  responsible for either
+     the  accuracy or  adequacy of  the material  supplied as  input for  processing by  the spColumn  computer
+     program. Furthermore, STRUCTUREPOINT neither makes any warranty expressed nor implied with respect to  the
+     correctness of  the output  prepared by  the spColumn  program. Although  STRUCTUREPOINT has endeavored to
+     produce spColumn error  free the program  is not and  cannot be certified  infallible. The final  and only
+     responsibility  for  analysis,   design  and  engineering   documents  is  the   licensee's.  Accordingly,
+     STRUCTUREPOINT disclaims all responsibility in contract, negligence or other tort for any analysis, design
+     or engineering documents prepared in connection with the use of the spColumn program.                     
+  
+  
+  
+
+
+  STRUCTUREPOINT - spColumn v6.00 (TM)                                                                    Page   2
+  Licensed to: SW, IFT. License ID: -26F18                                                                02/04/22
+  D:\My Software\Julia using atom\Interaction Diagram\spCol\examples.col                                  10:32 PM
+
+
+  General Information:
+  ====================
+    File Name: D:\My Software\Julia using atom\Interaction Diagram\spCol\examples.col
+    Project:  
+    Column:                                  Engineer: 
+    Code:     ACI 318-14                     Units: Metric
+
+    Run Option: Investigation                Slenderness: Not considered
+    Run Axis:   X-axis                       Column Type: Structural
+
+  Material Properties:
+  ====================
+    Concrete: Standard                       Steel: Standard
+    f'c   = 40 MPa                           fy     = 420 MPa
+    Ec    = 29725.4 MPa                      Es     = 200000 MPa
+    fc    = 34 MPa                           Eps_yt = 0.0021 mm/mm
+    Eps_u = 0.003 mm/mm
+    Beta1 = 0.759934
+
+  Section:
+  ========
+    Rectangular: Width = 500 mm              Depth = 500 mm
+
+    Gross section area, Ag =  250000 mm^2
+    Ix =  5.20833e+009 mm^4                  Iy =  5.20833e+009 mm^4
+    rx =  144.338 mm                         ry =  144.338 mm
+    Xo =  0 mm                               Yo =  0 mm
+
+  Reinforcement:
+  ==============
+    Bar Set: ASTM A615M
+    Size Diam (mm) Area (mm^2)   Size Diam (mm) Area (mm^2)   Size Diam (mm) Area (mm^2)
+    ---- --------- -----------   ---- --------- -----------   ---- --------- -----------
+    # 10        10          71   # 13        13         129   # 16        16         199
+    # 19        19         284   # 22        22         387   # 25        25         510
+    # 29        29         645   # 32        32         819   # 36        36        1006
+    # 43        43        1452   # 57        57        2581 
+
+    Confinement: Tied; #10 ties with #32 bars,  #13 with larger bars.
+    phi(a) = 0.8,  phi(b) = 0.9,  phi(c) = 0.65
+
+    Layout: Rectangular
+    Pattern: All Sides Equal  (Cover to transverse reinforcement)
+    Total steel area: As = 4544 mm^2 at rho = 1.82%
+    Minimum clear spacing = 76 mm 
+
+    16 #19   Cover = 40 mm
+
+  Control Points:
+  ===============
+                          Axial Load P     X-Moment     Y-Moment NA depth Dt depth    eps_t    Phi
+    Bending about                   kN          kNm          kNm       mm       mm
+    --------------------- ------------ ------------ ------------ -------- -------- -------- ------
+     X @ Max compression        6665.1         0.00         0.00     1470      441 -0.00210  0.650
+       @ Allowable comp.        5332.1       255.31         0.00      542      441 -0.00056  0.650
+       @ fs = 0.0               4321.7       381.30         0.00      441      441  0.00000  0.650
+       @ fs = 0.5*fy            3048.6       461.50         0.00      327      441  0.00105  0.650
+       @ Balanced point         2158.2       486.29         0.00      259      441  0.00210  0.650
+       @ Tension control        1483.7       570.60         0.00      165      441  0.00500  0.900
+       @ Pure bending              0.0       354.41         0.00       85      441  0.01254  0.900
+       @ Max tension           -1717.6         0.00         0.00        0      441  9.99999  0.900
+
+  STRUCTUREPOINT - spColumn v6.00 (TM)                                                                    Page   3
+  Licensed to: SW, IFT. License ID: -26F18                                                                02/04/22
+  D:\My Software\Julia using atom\Interaction Diagram\spCol\examples.col                                  10:32 PM
+
+
+    -X @ Max compression        6665.1         0.00         0.00     1470      441 -0.00210  0.650
+       @ Allowable comp.        5332.1      -255.31        -0.00      542      441 -0.00056  0.650
+       @ fs = 0.0               4321.7      -381.30        -0.00      441      441 -0.00000  0.650
+       @ fs = 0.5*fy            3048.6      -461.50        -0.00      327      441  0.00105  0.650
+       @ Balanced point         2158.2      -486.29        -0.00      259      441  0.00210  0.650
+       @ Tension control        1483.7      -570.60        -0.00      165      441  0.00500  0.900
+       @ Pure bending              0.0      -354.41        -0.00       85      441  0.01254  0.900
+       @ Max tension           -1717.6         0.00         0.00        0      441  9.99999  0.900
+
+
+    *** End of output ***
