@@ -208,11 +208,11 @@ for i = 1 : n_iter
 end
 
 #pure compression
-Pn_max = 1/0.65*0.85*(0.85*fc*(Ag*betha1-sum_As_negatif) + sum(Pn_))/1000
-Pn_pure = 0.85*(0.85*fc*(Ag*betha1-sum_As_negatif) + sum(Pn_))/1000
+Pn_max = (0.85*fc*(Ag-sum_As_negatif) + fy*sum_As_negatif)/1000
+Pn_pure =  0.65*Pn_max
 println(Pn_max)
 println(Pn_pure)
-println(Pn_pure/0.85*0.8)
+println(Pn_pure*0.8)
 #phi_Pn_pure = phi[n_iter] * Pn_pure
 #println("Pn_pure manual calc : ", Pn_pure)
 #println("Pn_pure iterasi : ", Pn[n_iter])
